@@ -1,3 +1,4 @@
+// tic tac toe game
 import java.util.*;
 
 public class lv2task1 {
@@ -57,19 +58,16 @@ public class lv2task1 {
     public static boolean checkWin(char[][] board, int row, int col) {
         char currentPlayerSymbol = board[row][col];
 
-        // Check row
         if (board[row][0] == currentPlayerSymbol && board[row][1] == currentPlayerSymbol
                 && board[row][2] == currentPlayerSymbol) {
             return true;
         }
 
-        // Check column
         if (board[0][col] == currentPlayerSymbol && board[1][col] == currentPlayerSymbol
                 && board[2][col] == currentPlayerSymbol) {
             return true;
         }
 
-        // Check diagonals
         if ((row == col || row + col == 2) &&
                 ((board[0][0] == currentPlayerSymbol && board[1][1] == currentPlayerSymbol
                         && board[2][2] == currentPlayerSymbol) ||
